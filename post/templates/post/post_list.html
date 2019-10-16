@@ -9,8 +9,9 @@
     {% for post in posts %}
     <li>
         <small> {{ post.created}} {{ post.author}} </small>
+        <a href="{% url 'post:post-detail' pk=post.pk %}">Czytaj</a>
         <h3>{{ post.title}} </h3>
-        <p> {{post.text|linebreaksbr }} </p>
+        <p> {{post.text|linebreaksbr|truncatechars:"150" }} </p>
     </li>
     {% endfor %}
 </body>

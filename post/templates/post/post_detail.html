@@ -1,0 +1,18 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wykop</title>
+</head>
+
+<body>
+    <a href="{% url 'post:post-list' %}">Powrót</a>
+    <br>
+    <small> {{ post.created}} {{ post.author}} </small>
+    <br>
+    <h3>{{ post.title}} </h3>
+    <p> {{post.text|linebreaksbr }} </p>
+
+</body>
+
+</html>
